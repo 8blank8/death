@@ -71,7 +71,8 @@ body {
 
 .death__btn {
   background-color: red;
-  padding: 10px 60px;
+  width: 150px;
+  height: 40px;
   font-size: 20px;
   text-transform: uppercase;
   border: none;
@@ -87,6 +88,26 @@ body {
   -webkit-transition-duration: 0.5s;
        -o-transition-duration: 0.5s;
           transition-duration: 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.death__btn div:nth-child(1) {
+  position: absolute;
+  left: 50px;
+}
+
+.death__btn div:nth-child(2) {
+  right: -60px;
+  position: absolute;
+  opacity: 0;
 }
 
 .death__btn:hover {
@@ -94,6 +115,22 @@ body {
   left: 3px;
   -webkit-box-shadow: 2px 2px 7px #ffffff;
           box-shadow: 2px 2px 7px #ffffff;
+}
+
+.death__btn:hover div:nth-child(1) {
+  opacity: 0;
+  left: -60px;
+  -webkit-transition-duration: 0.5s;
+       -o-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.death__btn:hover div:nth-child(2) {
+  right: 50px;
+  opacity: 1;
+  -webkit-transition-duration: 0.5s;
+       -o-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 .modal {
