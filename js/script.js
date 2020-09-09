@@ -106,13 +106,15 @@ const load = document.querySelector('.load'),
    elementsInsideBox = insideBox.querySelectorAll('div'),
    outsideBox = document.querySelector('.load__outinside-box'),
    elementsOutsideBox = outsideBox.querySelectorAll('div'),
-   loadBg = document.querySelector('.load__bg');
+   loadBg = document.querySelector('.load__bg'),
+   bodyLoad = document.querySelector('body');
 
 
 function addClassFon(element) {
    element.forEach(item => {
       item.classList.add('load__fon');
       item.classList.remove('load__clear');
+      bodyLoad.classList.add('load__fon');
    });
 }
 function addClassClear(element) {
@@ -125,24 +127,28 @@ function startLoad() {
    addClassFon(elementsInsideBox);
    setTimeout(() => {
       loadBg.classList.add('load__fon');
-   }, 500);
+   }, 400);
    setTimeout(() => {
       addClassFon(elementsOutsideBox);
-   }, 1000);
+   }, 800);
    setTimeout(() => {
       addClassClear(loadDiv);
-   }, 1500);
+
+   }, 1200);
    setTimeout(() => {
       loadDiv.forEach(item => {
          item.classList.remove('load__clear');
+
+
       });
-   }, 2000);
+   }, 1600);
 }
 startLoad();
 const timeLoad = setInterval(startLoad, 2000);
 function hideLoad() {
    setTimeout(() => {
       clearInterval(timeLoad);
+      bodyLoad.classList.remove('load__fon');
       load.style.display = "none";
    }, 3000);
 }
