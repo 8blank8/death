@@ -97,3 +97,53 @@ document.addEventListener('DOMContentLoaded', () => {
    setClock('.happy__timer', deadline);
 
 });
+
+//Загрузка
+
+const load = document.querySelector('.load'),
+   loadDiv = load.querySelectorAll('div'),
+   insideBox = document.querySelector('.load__inside-box'),
+   elementsInsideBox = insideBox.querySelectorAll('div'),
+   outsideBox = document.querySelector('.load__outinside-box'),
+   elementsOutsideBox = outsideBox.querySelectorAll('div'),
+   loadBg = document.querySelector('.load__bg');
+
+
+function addClassFon(element) {
+   element.forEach(item => {
+      item.classList.add('load__fon');
+      item.classList.remove('load__clear');
+   });
+}
+function addClassClear(element) {
+   element.forEach(item => {
+      item.classList.add('load__clear');
+      item.classList.remove('load__fon');
+   });
+}
+function startLoad() {
+   addClassFon(elementsInsideBox);
+   setTimeout(() => {
+      loadBg.classList.add('load__fon');
+   }, 500);
+   setTimeout(() => {
+      addClassFon(elementsOutsideBox);
+   }, 1000);
+   setTimeout(() => {
+      addClassClear(loadDiv);
+   }, 1500);
+   setTimeout(() => {
+      loadDiv.forEach(item => {
+         item.classList.remove('load__clear');
+      });
+   }, 2000);
+}
+startLoad();
+const timeLoad = setInterval(startLoad, 2000);
+function hideLoad() {
+   setTimeout(() => {
+      clearInterval(timeLoad);
+      load.style.display = "none";
+   }, 3000);
+}
+hideLoad();
