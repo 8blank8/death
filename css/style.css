@@ -520,7 +520,16 @@ body {
   }
 }
 
+body.load__fon {
+  overflow: hidden;
+}
+
+body.load__clear {
+  overflow: hidden;
+}
+
 .load {
+  overflow: hidden;
   position: fixed;
   top: 0;
   left: 0;
@@ -542,6 +551,10 @@ body {
           align-items: center;
   position: relative;
   top: 40%;
+  left: -5%;
+  -webkit-transform: scale(0.6);
+      -ms-transform: scale(0.6);
+          transform: scale(0.6);
   width: 300px;
   height: 300px;
   margin: 0px auto;
@@ -961,6 +974,12 @@ body {
 .load__arrow-right-mr.load__clear {
   opacity: 1;
   display: block;
+}
+
+@media (min-width: 500px) {
+  .load__box {
+    left: -1%;
+  }
 }
 
 @media screen and (max-width: 850px) {
