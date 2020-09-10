@@ -52,7 +52,7 @@ function hideLoad() {
       clearInterval(timeLoad);
       bodyLoad.classList.remove('load__fon');
       load.style.display = "none";
-   }, 10000);
+   }, 3000);
 }
 hideLoad();
 
