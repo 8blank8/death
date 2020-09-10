@@ -529,7 +529,6 @@ body.load__clear {
 }
 
 .load {
-  overflow: hidden;
   position: fixed;
   top: 0;
   left: 0;
