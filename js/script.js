@@ -1,6 +1,6 @@
 "use strict";
 
-//Загрузка
+//Загрузкa
 
 const load = document.querySelector('.load'),
    loadDiv = load.querySelectorAll('div'),
@@ -52,7 +52,7 @@ function hideLoad() {
       clearInterval(timeLoad);
       bodyLoad.classList.remove('load__fon');
       load.style.display = "none";
-   }, 3000);
+   }, 10000);
 }
 hideLoad();
 
