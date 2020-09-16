@@ -919,13 +919,13 @@ body.load__clear {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .portfolio__column {
-  margin: 15px 0px 0px 0px;
+  margin: 15px 10px 0px 10px;
   border: 5px solid rgba(245, 198, 1, 0.7);
   border-radius: 15px;
   overflow: hidden;
